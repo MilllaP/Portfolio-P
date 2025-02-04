@@ -1,0 +1,191 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-container {
+  position: relative;
+  width: 80%;
+  padding: 32px 0;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #00bfff;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin: 16px 0;
+}
+
+.year-header {
+  font-size: 24px;
+  position: absolute;
+  top: -70px;
+  color: #0cceff;
+  padding: 16px 0;
+  border-radius: 10px;
+}
+
+.timeline-item.left .year-header {
+  right: 0;
+}
+
+.timeline-item.right .year-header {
+  left: 0;
+}
+
+.timeline-item.left {
+  float: left;
+  text-align: right;
+  clear: both;
+  margin-left: -32px;
+}
+
+.timeline-item.right {
+  float: right;
+  text-align: left;
+  clear: both;
+  margin-right: -32px;
+}
+
+.timeline-item .content {
+  position: relative;
+  background: rgba(16, 16, 16, 0.18);
+  color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid #00bfff9f;
+  width: calc(100% - 32px);
+  margin: 0 1rem;
+}
+
+.timeline-item.work .content {
+  border-color: #8400ff;
+}
+
+.title-header.work,
+.year-header.work {
+  color: #8400ff;
+}
+
+.title-header.education {
+  color: #0cceff;
+}
+
+.timeline-marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #00bfff;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+}
+
+/* Marker positions */
+.marker-1 {
+  top: 2%;
+}
+
+.marker-2 {
+  top: 17.5%;
+}
+
+.marker-3 {
+  top: 32%;
+}
+
+.marker-4 {
+  top: 48%;
+}
+
+.marker-5 {
+  top: 63.5%;
+}
+
+.marker-6 {
+  top: 79%;
+}
+
+@media (max-width: 1000px) {
+  .timeline-container {
+    width: calc(100% - 40px);
+  }
+
+  .timeline-container::before {
+    left: calc(20px);
+  }
+
+  .timeline-item {
+    width: calc(100% - 40px);
+    float: none;
+    margin-left: 40px;
+  }
+
+  .timeline-item.left .year-header {
+    left: 0;
+  }
+
+  .timeline-item.left {
+    float: right;
+    text-align: left;
+    margin: 32px 0;
+  }
+
+  .timeline-item.right {
+    margin: 32px 0;
+  }
+
+  .timeline-marker {
+    left: -30px;
+    margin-left: 50px;
+  }
+
+  /* Adjust marker positions for mobile view */
+  .marker-1 {
+    top: 3%;
+  }
+
+  .marker-2 {
+    top: 18%;
+  }
+
+  .marker-3 {
+    top: 34%;
+  }
+
+  .marker-4 {
+    top: 50%;
+  }
+
+  .marker-5 {
+    top: 65.5%;
+  }
+
+  .marker-6 {
+    top: 81%;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-container {
+    width: 100%;
+  }
+  .timeline-item .content {
+    font-size: 15px;
+  }
+}

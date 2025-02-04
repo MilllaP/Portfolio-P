@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Introduction to Computing",
+    "credits": 5,
+    "grade": 3
+  },
+  {
+    "name": "Elementary Programming",
+    "credits": 5,
+    "grade": 5
+  },
+  {
+    "name": "Career Planning and Development 1: Studying at a University of Applied Sciences",
+    "credits": 2,
+    "grade": "pass/accepted"
+  },
+  {
+    "name": "Development Environments",
+    "credits": 3,
+    "grade": 5
+  },
+  {
+    "name": "Object-Oriented Programming",
+    "credits": 5,
+    "grade": 5
+  }
+]

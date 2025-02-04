@@ -1,0 +1,150 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.site {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-view {
+  position: relative;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: #070135;
+  overflow-y: auto;
+}
+
+.subject-box {
+  padding: 32px;
+  margin-top: 80px;
+  width: 90%;
+  border-radius: 20px;
+  background-color: hsla(252, 32%, 32%, 0.2);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.subject-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer {
+  width: 100%;
+  padding: 150px 0 100px 0;
+  background: #111111;
+}
+
+a {
+  color: #47c7fa;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: sans-serif;
+  color: #ff588a;
+  margin: 20px 0 20px 0;
+  display: inline-block;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      #ff588ab6,
+      rgba(255, 255, 255, 0)
+    )
+    1;
+  text-transform: uppercase;
+  transition: border-image 0.3s ease;
+}
+
+h3 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.site-btn,
+.down-btn,
+.up-btn {
+  font-size: 16px;
+  background-color: #601acf;
+  padding: 10px 20px;
+  margin: 16px 0;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.down-btn {
+  position: absolute;
+  bottom: 20px;
+  padding: 20px 25px;
+  border-radius: 40px;
+  background-color: black;
+  color: #c6a2ff;
+}
+
+.up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 1000;
+  padding: 15px 20px;
+  border-radius: 40px;
+}
+
+.site-btn:hover,
+.down-btn:hover,
+.up-btn:hover {
+  box-shadow: 0 0 5px #c6a2ff, 0 0 10px #c6a2ff, 0 0 20px #c6a2ff,
+    0 0 30px #c6a2ff;
+  transition: box-shadow 0.5s ease;
+}
+
+@media (max-width: 600px) {
+  .subject-box {
+    padding: 20px;
+  }
+
+  .up-btn {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  .icon-up {
+    font-size: 14px;
+  }
+}
