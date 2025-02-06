@@ -6,6 +6,10 @@ import Confetti from "react-confetti";
 import "/src/assets/styles/Contact.css";
 
 function ContactMe() {
+  const handleButtonClick = (url) => {
+    window.open(url, "_blank");
+  };
+
   const formInitialDetails = {
     name: "",
     email: "",
@@ -94,13 +98,7 @@ function ContactMe() {
 
   return (
     <div id="contact" className="contact-box">
-      <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
-        {showConfetti && (
-          <Confetti
-            width={confettiDimensions.width}
-            height={confettiDimensions.height}
-          />
-        )}
+      <div className="header-container">
         <h3 className="contact-header">
           {headerText.split("").map((char, index) => (
             <span
@@ -112,6 +110,43 @@ function ContactMe() {
             </span>
           ))}
         </h3>
+        <button
+          className="connect-btn"
+          aria-label="Visit Linkedin Profile"
+          onClick={() =>
+            handleButtonClick("https://www.linkedin.com/in/milla-pirttila/")
+          }
+        >
+          <svg
+            viewBox="0 0 448 512"
+            height="30px"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+          >
+            <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path>
+          </svg>
+
+          <span>
+            Connect{" "}
+            <svg
+              viewBox="0 0 24 24"
+              height="25px"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              style={{ padding: "0 0 0 10px" }}
+            >
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
+        {showConfetti && (
+          <Confetti
+            width={confettiDimensions.width}
+            height={confettiDimensions.height}
+          />
+        )}
 
         <div className="form-group">
           <div>
@@ -149,7 +184,7 @@ function ContactMe() {
             value={formDetails.message}
             onChange={handleChange}
             maxLength="1000"
-            placeholder="This is a dummy form and won't send any email. You can contact me through linkedin :)"
+            placeholder="This is a dummy form created to practice backend functionality. You can contact me through LinkedIn! :)"
             required
           ></textarea>
           <small className="char-counter">
