@@ -1,4 +1,3 @@
-// This component is a dummy component and won't send any email to the server
 // server.js contains the code for the server that will be used to send the email
 // user need's to create a .env file to root directory and add email and password
 import { useState, useEffect, useRef } from "react";
@@ -56,7 +55,6 @@ function ContactMe() {
     }, 1000);
 
     // Uncomment this section to enable actual email sending
-    /*
     try {
       let response = await fetch("http://localhost:5000/send", {
         method: "POST",
@@ -79,7 +77,6 @@ function ContactMe() {
       setButtonText("Send");
       setStatus({ type: error, message: "Failed to send message!" });
     }
-      */
   };
 
   const handleChange = (e) => {
@@ -113,9 +110,7 @@ function ContactMe() {
         <button
           className="connect-btn"
           aria-label="Visit Linkedin Profile"
-          onClick={() =>
-            handleButtonClick("https://www.linkedin.com/in/milla-pirttila/")
-          }
+          onClick={() => handleButtonClick("https://www.linkedin.com")}
         >
           <svg
             viewBox="0 0 448 512"
@@ -184,7 +179,6 @@ function ContactMe() {
             value={formDetails.message}
             onChange={handleChange}
             maxLength="1000"
-            placeholder="This is a dummy form created to practice backend functionality. You can contact me through LinkedIn! :)"
             required
           ></textarea>
           <small className="char-counter">

@@ -19,26 +19,5 @@
     "title": "Tampere Vocational College",
     "description": "Vocational Qualification in Printing Communications, Print Production Assistant",
     "type": "education"
-  },
-  {
-    "startYear": 2016,
-    "endYear": 2024,
-    "title": "Restaurant Industry",
-    "description": "Worked in various roles, ranging from customer service to kitchen tasks",
-    "type": "work"
-  },
-  {
-    "startYear": 2015,
-    "endYear": 2016,
-    "title": "Cleaning Industry",
-    "description": "Worked in various cleaning assignments",
-    "type": "work"
-  },
-  {
-    "startYear": 2014,
-    "endYear": 2015,
-    "title": "Media and Printing Industry",
-    "description": "Worked as a production and office assistant",
-    "type": "work"
   }
 ]

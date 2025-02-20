@@ -7,21 +7,11 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <p>
-        This portfolio&apos;s source code is on my{" "}
-        <a
-          href="https://github.com/MilllaP/Portfolio-P"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub!
-        </a>
-      </p>
       <div className="footer-logos">
         <button
           className="Btn"
           aria-label="Visit GitHub Profile"
-          onClick={() => handleButtonClick("https://github.com/MilllaP")}
+          onClick={() => handleButtonClick("https://github.com")}
         >
           <span className="svgContainer">
             <svg fill="white" viewBox="0 0 496 512" height="25.6px">
@@ -32,9 +22,7 @@ function Footer() {
         <button
           className="Btn"
           aria-label="Visit Linkedin Profile"
-          onClick={() =>
-            handleButtonClick("https://www.linkedin.com/in/milla-pirttila/")
-          }
+          onClick={() => handleButtonClick("https://www.linkedin.com")}
         >
           <span className="svgContainer">
             <svg

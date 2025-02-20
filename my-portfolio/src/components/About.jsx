@@ -69,7 +69,7 @@ function About() {
         </p>
         <ul className="about-list">
           <li>
-            <FaMapMarkerAlt className="icon" /> Tampere, Finland
+            <FaMapMarkerAlt className="icon" /> Finland
           </li>
           <li>
             <FaBook className="icon" /> Finnish, English
